@@ -17,7 +17,6 @@ body {
     overflow: hidden;
 }
 
-/* Telas e Menus */
 #menu, #game-over-screen {
     text-align: center;
     background: rgba(20, 20, 20, 0.9);
@@ -53,7 +52,6 @@ button:active {
     transform: translateY(2px);
 }
 
-/* Container do Jogo */
 #game-container {
     display: flex;
     flex-direction: column;
@@ -68,10 +66,12 @@ canvas {
     display: block;
     max-width: 100%;
     height: auto;
-    image-rendering: pixelated; /* Efeito Retro Pixel */
+    
+    /* CRUCIAL PARA PIXEL ART: Mantém os pixels nítidos */
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
 }
 
-/* Layout Responsivo para Celular */
 #controles-mobile {
     display: none;
     width: 100%;
@@ -91,7 +91,6 @@ canvas {
     background-color: #ff6600;
 }
 
-/* Classes Utilitárias */
 .hidden {
     display: none !important;
 }
